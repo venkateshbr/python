@@ -17,4 +17,4 @@ if __name__ == '__main__':
     app = connexion.App(__name__, specification_dir='swagger/')  # Provide the app and the directory of the docs
     app.add_api('couch-service-docs.yaml', options=options)
     FlaskInjector(app=app.app, modules=[configure])
-    app.run(port=int(os.environ.get('PORT', 2020))) # os.environ is handy if you intend to launch on heroku
+    app.run(port=int(os.environ.get('PORT', 2020))) # os.environ is handy if you intend to launch on herokuls
